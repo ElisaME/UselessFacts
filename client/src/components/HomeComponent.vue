@@ -1,22 +1,28 @@
 <template>
   <div class="hello">
     <p>First commit</p>
-    <p>{{message}}</p>
+    <button v-on:click="getRandomFact">Get Random Fact</button>
   </div>
 </template>
 
 <script> 
+import {APIService} from '../APIServices';
+const apiService = new APIService();
+
 export default {
   data() {
     return{
-      message:''
     }
   },
-  created() {
-    let uri = 'http://localhost:3000/';
-    this.axios.get(uri).then((response) => {
-      this.message = response.data.msg;
-    });
+  methods:{
+    getRandomFact(){
+      apiService.getFact()
+        .then((res) => {
+          /* eslint-disable no-console */
+          console.log(res.data);
+          /* eslint-enable no-console */
+        })
+    }
   }
 };
 </script>
