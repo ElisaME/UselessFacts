@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose
 
 const FactSchema = new Schema ({
-  id:String,
+  _id:{
+    type:String,
+    required:true
+  },
   text:String,
   source:String,
   sourceURL:String
