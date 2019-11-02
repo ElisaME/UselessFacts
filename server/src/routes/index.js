@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const {getFacts, randomFact} = require('../controllers/factsController');
 
-/* GET home page */
-router.get('/', (req, res, next) => {
-  res.json(
-    {'msg':'MERN Stack'}
-  )
-});
+router.get('/', getFacts);
+router.get('/randomFact', randomFact);
 
 module.exports = router
