@@ -16,7 +16,7 @@ exports.randomFact = ('/randomFact', (req, res, next) => {
       source:data.source,
       sourceURL:data.source_url
     })
-    res.status(200).json({data})
+    res.status(200).json({newFact})
   })
   .catch(err => console.log(err))
 })
