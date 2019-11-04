@@ -7,13 +7,13 @@ import axios from 'axios';
 Vue.use(VueAxios, axios);
 
 import App from './App.vue';
-import HomeComponent from './components/HomeComponent.vue';
+import FactComponent from './components/FactComponent.vue';
 
 const routes = [
   {
-    name: 'HomeComponent',
+    name: 'FactComponent',
     path: '/',
-    component: HomeComponent
+    component: FactComponent
   }
 ];
 

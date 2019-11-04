@@ -1,26 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HomeComponent/>
+    <FactComponent/>
   </div>
 </template>
 
 <script>
-import HomeComponent from './components/HomeComponent.vue'
+import FactComponent from './components/FactComponent.vue'
 
 export default {
   name: 'app',
-  components:{HomeComponent}
+  components:{FactComponent}
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import "~bulma/css/bulma.css";
+body{
+  margin:0;
+  padding: 0;
 }
 </style>
